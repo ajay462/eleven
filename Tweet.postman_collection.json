@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "146cb454-8421-4490-b0f5-87252785e0db",
+		"name": "Tweet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9500/v1/User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loginId\":\"Madhu1234\",\r\n    \"firstName\":\"Moulica\",\r\n    \"lastName\":\"Sudamalla\",\r\n    \"mailId\":\"abc@gmail.com\",\r\n    \"passWord\":\"Madihubam\",\r\n    \"contactNumber\":9966077601\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9500/v1/User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9500/v1/User/getAllUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJLYWx5YW45NSIsImlhdCI6MTYxNzExNTc3OCwiZXhwIjoxNjE3MTE1ODk4fQ.YZO-WPRMbUWiOTYcPCNYiIJ-xG1yfb9obQQHQ72cPdE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9500/v1/User/getAllUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"User",
+						"getAllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9500/v1/User/searchByUserId/Abhi123",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9500/v1/User/searchByUserId/Abhi123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"User",
+						"searchByUserId",
+						"Abhi123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9500/v1/Tweet/getAllTweets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9500/v1/Tweet/getAllTweets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"Tweet",
+						"getAllTweets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9500/v1/Tweet/getTweetByUser/Abhi123",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9500/v1/Tweet/getTweetByUser/Abhi123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"Tweet",
+						"getTweetByUser",
+						"Abhi123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9500/v1/Tweet/postTweet/Abhi123",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userLoginId\":\"Abhi123\",\r\n    \"tweetMessage\": \"Hi I'm new to this application\",\r\n    \"hashTag\": \"#positivevibes\" ,\r\n    \"replies\":[\r\n        {\r\n       \"replyText\": \"xyz\"\r\n    }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9500/v1/Tweet/postTweet/Abhi123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"Tweet",
+						"postTweet",
+						"Abhi123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9500/v1/Tweet/like/1618225100296",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetId\":1616680446876\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9500/v1/Tweet/like/1616680446876",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"Tweet",
+						"like",
+						"1616680446876"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9500/v1/Tweet/1616675037295234",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9500/v1/Tweet/1616675037295234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"Tweet",
+						"1616675037295234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9500/v1/Tweet/updateTweet/1616680446876",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetMessage\":\"Too glam to give a damn\",\r\n    \"hashTag\":\"#selflove\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9500/v1/Tweet/updateTweet/1616680446876",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"Tweet",
+						"updateTweet",
+						"1616680446876"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9001/v1/Tweet/reply/1616680446876",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"tweetId\": 1616680446876,\r\n        \"userLoginId\": \"Madhu123\",\r\n        \"replyText\" :\"Marvelous!!!!!!!!!!!!!!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/v1/Tweet/reply/1616680446876",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"v1",
+						"Tweet",
+						"reply",
+						"1616680446876"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9500/v1/User/loginUsers",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Madhu",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Kalyan95",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9500/v1/User/loginUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"User",
+						"loginUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9500/v1/User/forgot",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"loginId\":\"Kalyan95\",\r\n    \"passWord\":\"NewPassword\",\r\n    \"contactNumber\" : 9154529618\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9500/v1/User/forgot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"v1",
+						"User",
+						"forgot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9001/v1/Tweet/reply/1616680446876",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"tweetId\": 1616680446876,\r\n        \"userLoginId\": \"Madhu123\",\r\n        \"replyText\" :\"Fantastatic!!!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/v1/Tweet/reply/1616680446876",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"v1",
+						"Tweet",
+						"reply",
+						"1616680446876"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
