@@ -1,1 +1,15 @@
 java -jar lombok -1.18.18.jar
+public List<TweetDoc> fetchAllTweets() {
+        List<TweetDoc> tweets = (List<TweetDoc>) tweetRepository.findAll();
+        List<TweetDoc> tweetList = new ArrayList<TweetDoc>(tweets);
+        Comparator<TweetDoc> compareByPostedOn = (TweetDoc o1, TweetDoc o2) -> o2.getTweet().getPostedOn().compareTo(o1.getTweet().getPostedOn());
+        Collections.sort(tweetList, compareByPostedOn);
+        return tweetList;
+    }
+ 
+    public List<TweetDoc> fetchByUser(String userName) {
+        List<TweetDoc> tweetList = new ArrayList<TweetDoc>(tweetRepository.findByUserName(userName));
+        Comparator<TweetDoc> compareByPostedOn = (TweetDoc o1, TweetDoc o2) -> o2.getTweet().getPostedOn().compareTo(o1.getTweet().getPostedOn());
+        Collections.sort(tweetList, compareByPostedOn);
+        return tweetList;
+    }
